@@ -77,20 +77,25 @@ First 10 merge rules:
 
 ## Interactive Demo
 
-The notebook walks through the full pipeline with visualizations:
+The notebook `notebooks/demo.ipynb` walks through the full BPE pipeline step by step,
+combining narrative explanations with visualizations. It is pre-executed and renders
+directly on GitHub — no local setup required to read it.
+
+To run it locally:
 
 ```bash
 jupyter notebook notebooks/demo.ipynb
 ```
 
-| Section | Content |
-|---|---|
-| Corpus | Stats: characters, words, unique symbols |
-| Character Frequencies | Top 30 chars bar chart |
-| BPE Training | Merge rules, vocabulary growth |
-| Top Merge Rules | First 20 merges by rank |
-| Tokenization in Action | Encode/decode on real Shakespeare quotes |
-| Sequence Compression | Characters vs BPE tokens per sentence |
+| # | Section | What you will see |
+|---|---|---|
+| 1 | Corpus | Total characters, words, and unique symbols in Tiny Shakespeare |
+| 2 | Character Frequencies | Horizontal bar chart of the top 30 most frequent characters |
+| 3 | BPE Training | Merge rules learned, vocabulary size after 500 iterations |
+| 4 | Vocabulary Growth | Line chart of vocabulary size over merge steps |
+| 5 | Top Merge Rules | First 20 merges ranked by order of discovery |
+| 6 | Tokenization in Action | Encode and decode real Shakespeare quotes with roundtrip assert |
+| 7 | Sequence Compression | Grouped bar chart comparing character count vs BPE token count |
 
 ---
 
